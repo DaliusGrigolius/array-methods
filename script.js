@@ -8,7 +8,7 @@
 // const numbers = [10, 20, 50, 90, 100, 150];
 // console.log(numbers.reduce((prev, curr) => prev + curr, 0));
 
-// --- Parašykite programą, kuri suskaičiuos cities bendrą area sumą.
+// --- Parašykite programą, kuri suskaičiuos cities bendrą area sumą. ---
 
 // const cities = [
 // 	{ name: "Klaipeda", area: 10000 },
