@@ -87,7 +87,7 @@
 
 // pop ismeta galini itema, o shift priekini.
 
-// --- 7 --- Parašykite programą, kuri paims pirmus du ir paskutinius vardus iš masyvo. Atsakymas turi būti: firstTwo = ["Rock", "Bob"];ir lastTwo="Sue", "Johny"].
+// --- 7 --- Parašykite programą, kuri paims pirmus du ir paskutinius vardus iš masyvo. Atsakymas turi būti: firstTwo = ["Rock", "Bob"]; ir lastTwo = ["Sue", "Johny"].
 
 // const names = ["Rock", "Bob", "Ash", "Sue", "Johny"];
 // const slicedFirstTwo = names.slice([0], [2]);
@@ -125,3 +125,28 @@
 // months.splice(10, 0, "Lapkritis");
 
 // console.log(months);
+// ------------------------------------------------
+// fibonacci formula. very effective
+// const fib = (n, memo = {}) => {
+// 	if (n in memo) return memo[n];
+// 	if (n <= 2) return 1;
+
+// 	memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+// 	return memo[n];
+// };
+// console.log(fib(16));
+// ------------------------------------------------
+function anagrams(word, arr) {
+	const sortedString = word.split("").sort().join("");
+
+	const newArrr = [];
+	for (let i = 0; i < arr.length; i++) {
+		const elem = arr[i];
+		const elemSorted = elem.split("").sort().join("");
+		if (sortedString === elemSorted) {
+			newArrr.push(elem);
+		}
+	}
+	return newArrr;
+}
+anagrams("racer", ["crazer", "carer", "racar", "caers", "racer"]);
